@@ -1,0 +1,10 @@
+{
+	"user": "Mergevos",
+	"repo": "samp-pp-specifiers",
+	"entry": "test.pwn",
+	"output": "test.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib",
+		"IllidanS4/PawnPlus"
+	]
+}
