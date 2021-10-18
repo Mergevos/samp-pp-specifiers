@@ -20,6 +20,37 @@ Include in your code and begin using the library:
 
 ## Usage
 
+Register your own specifiers with this function:
+
+```pawn
+stock PP_RegisterSpecifier(specifier, const handler[], bool:is_string=false)
+
+//Example
+
+PP_RegisterSpecifier('g', "SomeCallbackToHandle", false);
+
+print_s(str_format("He is %g connected.", playerid));
+
+forward String: SomeCallbackToHandle(playerid, type, String: format);
+public String: SomeCallbackToHandle(playerid, type, String: format)
+{
+  if(!IsPlayerConnected(playerid))
+  {
+    return str_new("Not connected");
+  }
+  return str_new("Connected");
+}
+```
+
+Firstly, we register specifier character with handler function, and our specifier doesn't accept normal strings, so you can't specify NORMAL (not PawnPlus) string instead of playerid. `print_s` part is pretty straightforward.
+
+`public String: SomeCallbackToHandle(playerid, type, String: format)` is handler. It is basically a function which handles the specifier. `type` is character of the specifier, in this case it is `g`. `String: format` is pawnplus string of everything you input in front of specifier, eg. `%03g`, will make format `03`. 
+
+|--|
+|New Specifiers|
+|%a|
+|%m|
+|--|
 
 ## Testing
 
