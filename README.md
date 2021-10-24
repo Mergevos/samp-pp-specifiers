@@ -46,12 +46,13 @@ Firstly, we register specifier character with handler function, and our specifie
 
 `public String: SomeCallbackToHandle(playerid, type, String: format)` is handler. It is basically a function which handles the specifier. `type` is character of the specifier, in this case it is `g`. `String: format` is pawnplus string of everything you input in front of specifier, eg. `%03g`, will make format `03`. 
 
-|---|---|
 |New Specifiers|What does it do?|
 |---|---|
-|%a|Blah|
-|%m|Blah|
-|---|---|
+|%a|Returns modelid from vehicleid.|
+|%m|Vehicle name from modelid.|
+|%M|Vehicle name from modelid (used in sentence).|
+|%w|Weapon name from weaponid.|
+|%W|Weapon name from weaponid (used in sentence). |
 
 ## Testing
 
