@@ -48,6 +48,7 @@ Firstly, we register specifier character with handler function, and our specifie
 
 |---|
 |New Specifiers|
+|---|
 |%a|
 |%m|
 |---|
